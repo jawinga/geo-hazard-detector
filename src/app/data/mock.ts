@@ -1,7 +1,7 @@
 import {
   StormAlert,
   TsunamiAlert,
-  FloodingAlert,
+  floodAlert,
   VolcanoeAlert,
   EarthquakeAlert,
   Alert,
@@ -19,17 +19,7 @@ export const mockStorms: StormAlert[] = [
     windSpeed: 120,
     pressure: 100,
   },
-  {
-    id: 2,
-    severity: 1,
-    time: new Date('2025-07-10'),
-    location: 'Florida, USA',
-    description: 'Category 4 hurricane approaching coastline',
-    type: 'storm',
-    stormType: 'hurricane',
-    windSpeed: 200,
-    pressure: 940,
-  },
+
   {
     id: 3,
     severity: 3,
@@ -90,14 +80,14 @@ export const mockTsunamis: TsunamiAlert[] = [
   },
 ];
 
-export const mockFloodings: FloodingAlert[] = [
+export const mockfloods: floodAlert[] = [
   {
     id: 20,
     severity: 1,
     time: new Date('2025-05-14'),
     location: 'Venice, Italy',
-    description: 'Severe flooding from record high tide',
-    type: 'flooding',
+    description: 'Severe flood from record high tide',
+    type: 'flood',
     waterLevel: 180,
     floodStage: 'Major',
     affectedArea: 'Historic city center',
@@ -108,7 +98,7 @@ export const mockFloodings: FloodingAlert[] = [
     time: new Date('2025-08-02'),
     location: 'Mississippi River, USA',
     description: 'River overflow warning after heavy rainfall',
-    type: 'flooding',
+    type: 'flood',
     waterLevel: 140,
     floodStage: 'Moderate',
     affectedArea: 'Southern river basin',
@@ -119,7 +109,7 @@ export const mockFloodings: FloodingAlert[] = [
     time: new Date('2025-04-21'),
     location: 'Bangladesh',
     description: 'Seasonal monsoon floods affecting rural areas',
-    type: 'flooding',
+    type: 'flood',
     waterLevel: 95,
     floodStage: 'Minor',
     affectedArea: 'Coastal delta region',
@@ -133,7 +123,7 @@ export const mockVolcanoes: VolcanoeAlert[] = [
     time: new Date('2025-01-05'),
     location: 'Mount Etna, Italy',
     description: 'Explosive eruption with sustained ash plume',
-    type: 'volcanoe',
+    type: 'volcano',
     eruptionType: 'explosive',
     ashHeight: 9000,
   },
@@ -143,7 +133,7 @@ export const mockVolcanoes: VolcanoeAlert[] = [
     time: new Date('2025-09-19'),
     location: 'Kilauea, Hawaii',
     description: 'Effusive lava flow expanding across lava field',
-    type: 'volcanoe',
+    type: 'volcano',
     eruptionType: 'effusive',
     ashHeight: 1200,
   },
@@ -153,7 +143,7 @@ export const mockVolcanoes: VolcanoeAlert[] = [
     time: new Date('2025-07-11'),
     location: 'Mount Fuji, Japan',
     description: 'Increased seismicity suggesting possible unrest',
-    type: 'volcanoe',
+    type: 'volcano',
     eruptionType: 'phreatic',
     ashHeight: 300,
   },
@@ -198,7 +188,7 @@ export const mockEarthquakes: EarthquakeAlert[] = [
 export const mockAlerts: Alert[] = [
   ...mockStorms,
   ...mockTsunamis,
-  ...mockFloodings,
+  ...mockfloods,
   ...mockVolcanoes,
   ...mockEarthquakes,
 ];

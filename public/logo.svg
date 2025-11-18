@@ -1,0 +1,112 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="128"
+  height="128"
+  viewBox="0 0 120 120"
+  role="img"
+  aria-label="Geo hazard detector logo"
+>
+  <!-- Outer dark background -->
+  <circle cx="60" cy="60" r="56" fill="#0A192F" />
+
+  <!-- Outer primary ring -->
+  <circle
+    cx="60"
+    cy="60"
+    r="46"
+    fill="none"
+    stroke="#2b6cee"
+    stroke-width="3"
+  />
+
+  <!-- Radar concentric circles -->
+  <circle
+    cx="60"
+    cy="60"
+    r="32"
+    fill="none"
+    stroke="#64FFDA"
+    stroke-width="2"
+    stroke-opacity="0.9"
+  />
+  <circle
+    cx="60"
+    cy="60"
+    r="22"
+    fill="none"
+    stroke="#2b6cee"
+    stroke-width="1.5"
+    stroke-dasharray="4 4"
+    stroke-linecap="round"
+    stroke-opacity="0.8"
+  />
+
+  <!-- Radar sweep sector -->
+  <path
+    d="
+      M60 60
+      L60 18
+      A42 42 0 0 1 98 56
+      Z
+    "
+    fill="#2b6cee"
+    fill-opacity="0.25"
+  />
+
+  <!-- Central map pin (geo focus) -->
+  <path
+    d="
+      M60 28
+      C50 28 42 36 42 46
+      C42 59.5 55 73 60 78
+      C65 73 78 59.5 78 46
+      C78 36 70 28 60 28
+      Z
+    "
+    fill="#112240"
+    stroke="#64FFDA"
+    stroke-width="2"
+  />
+
+  <!-- Pin inner circle -->
+  <circle cx="60" cy="46" r="7" fill="#2b6cee" />
+
+  <!-- Exclamation inside pin (alert icon) -->
+  <rect
+    x="58.5"
+    y="39"
+    width="3"
+    height="9"
+    rx="1.5"
+    fill="#E6F1FF"
+  />
+  <circle cx="60" cy="51.5" r="1.6" fill="#E6F1FF" />
+
+  <!-- Hazard markers around the radar -->
+  <circle cx="92" cy="36" r="4.2" fill="#FF4560" />  <!-- emergency -->
+  <circle cx="32" cy="40" r="3.8" fill="#FEB019" />  <!-- storm -->
+  <circle cx="82" cy="82" r="3.8" fill="#FFD700" />  <!-- flood -->
+  <circle cx="38" cy="82" r="3.5" fill="#7E57C2" />  <!-- wildfire / other -->
+
+  <!-- Small crosshair in center -->
+  <line
+    x1="60"
+    y1="54"
+    x2="60"
+    y2="66"
+    stroke="#8892B0"
+    stroke-width="1"
+    stroke-linecap="round"
+    stroke-opacity="0.7"
+  />
+  <line
+    x1="54"
+    y1="60"
+    x2="66"
+    y2="60"
+    stroke="#8892B0"
+    stroke-width="1"
+    stroke-linecap="round"
+    stroke-opacity="0.7"
+  />
+</svg>

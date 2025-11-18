@@ -1,1 +1,13 @@
-<p>alerts-feed works!</p>
+<div id="feed">
+  <div class="title-feed">
+    <h2>Live Alerts</h2>
+    <p>Monitoring real-time global hazards</p>
+  </div>
+  <section class="alerts">
+    @for (alert of alerts; track alert.id) {
+
+    <app-alert-item [alert]="alert"></app-alert-item>
+
+    }
+  </section>
+</div>

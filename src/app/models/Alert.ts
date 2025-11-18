@@ -1,4 +1,4 @@
-type AlertType = 'earthquake' | 'flooding' | 'storm' | 'tsunami' | 'volcanoe';
+type AlertType = 'earthquake' | 'flood' | 'storm' | 'tsunami' | 'volcano';
 type Severity = 1 | 2 | 3 | 4; //most to least
 type EruptionType = 'effusive' | 'explosive' | 'phreatic';
 type AlertVolcanoeLevel = 'green' | 'yellow' | 'orange' | 'red';
@@ -21,8 +21,8 @@ export interface EarthquakeAlert extends Alert {
   coordinates: string;
 }
 
-export interface FloodingAlert extends Alert {
-  type: 'flooding';
+export interface floodAlert extends Alert {
+  type: 'flood';
   severity: Severity;
   waterLevel: number;
   floodStage: string;
@@ -38,7 +38,7 @@ export interface TsunamiAlert extends Alert {
 }
 
 export interface VolcanoeAlert extends Alert {
-  type: 'volcanoe';
+  type: 'volcano';
   eruptionType: EruptionType;
   severity: AlertVolcanoeLevel;
   ashHeight: number;
@@ -48,5 +48,5 @@ export interface StormAlert extends Alert {
   type: 'storm';
   stormType: StormType;
   windSpeed: number;
-  pressure: string;
+  pressure: number;
 }
