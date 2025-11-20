@@ -1,0 +1,37 @@
+@use '../../../../styles/variables' as *;
+
+.search-bar {
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: solid 1px $text-secondary-dark;
+  border-radius: 12px;
+
+  &:focus {
+    outline: 1px solid lighten($text-secondary-dark, 20%);
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    width: max-content;
+    flex: 1 1 auto; // ⬅️ key: let it take remaining space
+    min-width: 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus::selection {
+      background: transparent;
+    }
+  }
+
+  &:focus-within {
+    border-color: lighten($text-secondary-dark, 20%);
+  }
+}
