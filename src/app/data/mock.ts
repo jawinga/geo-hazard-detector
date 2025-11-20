@@ -1,7 +1,7 @@
 import {
   StormAlert,
   TsunamiAlert,
-  floodAlert,
+  FloodAlert,
   VolcanoeAlert,
   EarthquakeAlert,
   Alert,
@@ -10,8 +10,9 @@ import {
 export const mockStorms: StormAlert[] = [
   {
     id: 1,
-    severity: 2,
-    time: new Date('2025-12-12'),
+    severity: 1,
+    specificSeverity: 'EF3',
+    time: new Date('2025-10-10'),
     location: 'Utah',
     description: 'Terrible tornado incoming',
     type: 'storm',
@@ -23,6 +24,7 @@ export const mockStorms: StormAlert[] = [
   {
     id: 3,
     severity: 3,
+    specificSeverity: 'moderate',
     time: new Date('2025-09-05'),
     location: 'Texas, USA',
     description: 'Strong thunderstorm with high lightning frequency',
@@ -34,6 +36,7 @@ export const mockStorms: StormAlert[] = [
   {
     id: 4,
     severity: 2,
+    specificSeverity: 'EF2',
     time: new Date('2025-10-03'),
     location: 'Oklahoma, USA',
     description: 'Tornado watch issued across rural areas',
@@ -48,6 +51,7 @@ export const mockTsunamis: TsunamiAlert[] = [
   {
     id: 10,
     severity: 1,
+    specificSeverity: 'major',
     time: new Date('2025-03-12'),
     location: 'Honshu, Japan',
     description: 'Large tsunami triggered by offshore earthquake',
@@ -59,6 +63,7 @@ export const mockTsunamis: TsunamiAlert[] = [
   {
     id: 11,
     severity: 2,
+    specificSeverity: 'moderate',
     time: new Date('2025-06-18'),
     location: 'Chile Coast',
     description: 'Moderate tsunami waves expected after deep quake',
@@ -69,7 +74,8 @@ export const mockTsunamis: TsunamiAlert[] = [
   },
   {
     id: 12,
-    severity: 3,
+    severity: 3, // lowest
+    specificSeverity: 'minor',
     time: new Date('2025-04-08'),
     location: 'Hawaii',
     description: 'Small tsunami detected, minimal coastal impact expected',
@@ -80,10 +86,11 @@ export const mockTsunamis: TsunamiAlert[] = [
   },
 ];
 
-export const mockfloods: floodAlert[] = [
+export const mockfloods: FloodAlert[] = [
   {
     id: 20,
     severity: 1,
+    specificSeverity: 'severe',
     time: new Date('2025-05-14'),
     location: 'Venice, Italy',
     description: 'Severe flood from record high tide',
@@ -95,6 +102,7 @@ export const mockfloods: floodAlert[] = [
   {
     id: 21,
     severity: 2,
+    specificSeverity: 'moderate',
     time: new Date('2025-08-02'),
     location: 'Mississippi River, USA',
     description: 'River overflow warning after heavy rainfall',
@@ -106,6 +114,7 @@ export const mockfloods: floodAlert[] = [
   {
     id: 22,
     severity: 3,
+    specificSeverity: 'minor',
     time: new Date('2025-04-21'),
     location: 'Bangladesh',
     description: 'Seasonal monsoon floods affecting rural areas',
@@ -119,7 +128,8 @@ export const mockfloods: floodAlert[] = [
 export const mockVolcanoes: VolcanoeAlert[] = [
   {
     id: 30,
-    severity: 'red',
+    severity: 1,
+    specificSeverity: 'red',
     time: new Date('2025-01-05'),
     location: 'Mount Etna, Italy',
     description: 'Explosive eruption with sustained ash plume',
@@ -129,7 +139,8 @@ export const mockVolcanoes: VolcanoeAlert[] = [
   },
   {
     id: 31,
-    severity: 'orange',
+    severity: 2,
+    specificSeverity: 'orange',
     time: new Date('2025-09-19'),
     location: 'Kilauea, Hawaii',
     description: 'Effusive lava flow expanding across lava field',
@@ -139,7 +150,8 @@ export const mockVolcanoes: VolcanoeAlert[] = [
   },
   {
     id: 32,
-    severity: 'yellow',
+    severity: 3,
+    specificSeverity: 'yellow',
     time: new Date('2025-07-11'),
     location: 'Mount Fuji, Japan',
     description: 'Increased seismicity suggesting possible unrest',
@@ -153,7 +165,8 @@ export const mockEarthquakes: EarthquakeAlert[] = [
   {
     id: 40,
     severity: 1,
-    time: new Date('2025-02-23'),
+    specificSeverity: 'strong',
+    time: new Date('2024-11-18'),
     location: 'San Francisco, USA',
     description: 'Strong earthquake felt across Bay Area',
     type: 'earthquake',
@@ -164,6 +177,7 @@ export const mockEarthquakes: EarthquakeAlert[] = [
   {
     id: 41,
     severity: 2,
+    specificSeverity: 'moderate',
     time: new Date('2025-03-03'),
     location: 'Santiago, Chile',
     description: 'Moderate earthquake with minor structural damage',
@@ -175,6 +189,7 @@ export const mockEarthquakes: EarthquakeAlert[] = [
   {
     id: 42,
     severity: 3,
+    specificSeverity: 'light',
     time: new Date('2025-06-10'),
     location: 'Tokyo, Japan',
     description: 'Light earthquake, widely felt but no damage',

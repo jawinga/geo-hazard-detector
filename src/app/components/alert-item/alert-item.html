@@ -1,8 +1,16 @@
-<div class="alerts-detail">
-  <mat-icon>{{ alert.type }}</mat-icon>
-  <div class="text-detail">
-    <p>{{ alert.description }}</p>
+<div class="alerts-item">
+  @if (alert.type === 'storm') {
+
+  <mat-icon [style.color]="getSeverityColor()">{{ getStormIcon() }}</mat-icon>
+
+  }@else {
+  <mat-icon [style.color]="getSeverityColor()">{{ iconMap[alert.type] }}</mat-icon>
+
+  }
+
+  <div class="text-item">
+    <p>{{ getSpecificSeverity() + ' ' + alert.type }}</p>
     <p>{{ alert.location }}</p>
-    <p>{{ alert.time }}</p>
+    <p>{{ calculateTime(alert.time) }}</p>
   </div>
 </div>

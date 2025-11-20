@@ -4,7 +4,7 @@
     <p>Monitoring real-time global hazards</p>
   </div>
   <section class="alerts">
-    @for (alert of alerts; track alert.id) {
+    @for (alert of sortedAlerts; track alert.id) {
 
     <app-alert-item [alert]="alert"></app-alert-item>
 
