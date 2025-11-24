@@ -4,11 +4,19 @@
     <p>Monitoring real-time global hazards</p>
   </div>
   <section class="alerts">
-    <app-search-bar></app-search-bar>
-    @for (alert of sortedAlerts; track alert.id) {
+    <app-search-bar (mySearch)="onSearchChange($event)"></app-search-bar>
+
+    @if (searchQuery.length > 0) { @if (filteredAlerts.length === 0) {
+    <p class="no-alerts">No alerts found</p>
+
+    }@else{ @for (alert of filteredAlerts; track alert.id) {
 
     <app-alert-item [alert]="alert"></app-alert-item>
 
-    }
+    } } }@else { @for (alert of sortedAlerts; track alert.id) {
+
+    <app-alert-item [alert]="alert"></app-alert-item>
+
+    } }
   </section>
 </div>

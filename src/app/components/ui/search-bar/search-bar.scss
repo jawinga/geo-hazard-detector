@@ -15,12 +15,20 @@
     outline: 1px solid lighten($text-secondary-dark, 20%);
   }
 
-  input {
+  input[type='text'] {
     background-color: transparent;
     border: none;
     width: max-content;
-    flex: 1 1 auto; // ⬅️ key: let it take remaining space
+    flex: 1 1 auto;
     min-width: 0;
+
+    color: white;
+    font-size: 1rem;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+      opacity: 1;
+    }
 
     &:focus {
       outline: none;

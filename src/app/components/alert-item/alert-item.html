@@ -11,6 +11,6 @@
   <div class="text-item">
     <p>{{ getSpecificSeverity() + ' ' + alert.type }}</p>
     <p>{{ alert.location }}</p>
-    <p>{{ calculateTime(alert.time) }}</p>
+    <p>{{ alert.time | timeAgo }}</p>
   </div>
 </div>

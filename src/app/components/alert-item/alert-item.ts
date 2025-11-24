@@ -1,16 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { Alert, StormAlert } from '../../models/Alert';
 import { MatIconModule } from '@angular/material/icon';
-import { calculateTime } from '../../helpers/functions';
-
+import { TimeAgoPipe } from '../../shared/pipes/timeAgo/time-ago-pipe';
 @Component({
   selector: 'app-alert-item',
-  imports: [MatIconModule],
+  imports: [MatIconModule, TimeAgoPipe],
   templateUrl: './alert-item.html',
   styleUrl: './alert-item.scss',
 })
 export class AlertItem {
-  calculateTime = calculateTime;
   @Input() alert!: Alert;
 
   iconMap: Record<string, string> = {
